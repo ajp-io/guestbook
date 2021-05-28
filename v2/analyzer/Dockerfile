@@ -15,7 +15,7 @@ RUN pip install retry
 
 RUN mkdir ~/python-pycurl-openssl && \
     cd ~/python-pycurl-openssl && \
-    curl https://dl.bintray.com/pycurl/pycurl/pycurl-7.43.0.2.tar.gz -L -O && \
+    pip download pycurl==7.43.0.2 && \
     tar -xzvf pycurl-7.43.0.2.tar.gz && \
     cd pycurl-7.43.0.2 && \
     python2.7 setup.py --with-ssl install
